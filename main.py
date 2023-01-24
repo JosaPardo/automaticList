@@ -30,8 +30,7 @@ def precios_productos():
 def insert_data():
     conn = sqlite3.connect("basedate.db")
     cursor = conn.cursor()
-    #query = 'CREATE TABLE product (id INTEGER PRIMARY KEY, producto TEXT COLLATE NOCASE, precio REAL)'
-    #cursor.execute(query)
+   
     
     query = '''DROP TABLE IF EXISTS product'''
     cursor.execute(query)
