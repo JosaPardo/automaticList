@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mainer</title>
+<script>
+	function runScript() {
+    fetch('/run_script', {method: 'POST'})
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error))
+}
+    /*
+    function checkScriptStatus() {
+    fetch('/check-script-status')
+        .then(response => response.text())
+        .then(data => {
+        if (data === 'True') {
+            alert('Script finalizado con éxito');
+        } else {
+            setTimeout(checkScriptStatus, 1000);
+        }
+        })
+        .catch(error => {
+        alert('Error al comunicarse con el servidor');
+        });
+}
+    */
+   
+    
+</script>
+<style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    body{
+        background-color: black;
+    }
+    h1{
+        color: aqua;
+    }
+    button{
+        font-size: 30px;
+        
+    }
+    .grid-layout{
+        display: grid;
+        width: 50%;
+        margin: 0 auto;
+        background-color: #2EFF00;
+        padding: 20px;
+        border: 1px solid black;
+    }
+    .caja{
+        
+        text-align: center;
+        line-height: 100px;
+    }
+    .main{
+        display: grid;
+        place-items: center center;
+    }
+    a:link{
+        text-decoration: none;
+    }
+
+</style>
+</head>
+<body>
+    <div class="main">
+        <h1>Lista de precios automatizada</h1>
+        <div class="grid-layout">
+                <button class="caja" onclick="runScript()">
+                    Iniciar Proceso
+                </button>
+                
+                <button class="caja"><a href="http://127.0.0.1:5000/main">Mostrar Lista</a></button>
+
+
+                
+
+                
+        </div>
+    </div>
+</body>
+</html>
