@@ -31,7 +31,7 @@ def contacto():
 def run_script():
     """Esta funcion se ejecuta cuando el boton del index es precionado, ejecuta el webscraping y añade 
     los datos a la base de datos"""
-    subprocess.call(["python", "main.py"])
+    subprocess.call(["python3", "main.py"])
 
 if __name__ == '__main__':
     app.run(debug=True)
